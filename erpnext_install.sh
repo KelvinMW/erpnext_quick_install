@@ -268,6 +268,13 @@ bench init frappe-bench --version version-14 --verbose --install-app erpnext --v
 echo -e "${GREEN}Bench installation complete!${NC}"
 sleep 1
 
+#initialize frappe heathcare
+echo -e "${YELLOW}Initialising bench in frappe-bench folder.${NC}" 
+echo -e "${LIGHT_BLUE}If you get a restart failed, don't worry, we will resolve that later.${NC}"
+bench init frappe-bench --version version-14 --verbose --install-app healthcare --version version-14
+echo -e "${GREEN}Bench installation complete!${NC}"
+sleep 1
+
 # Prompt user for site name
 echo -e "${YELLOW}Preparing for Production installation. This could take a minute... or two so please be patient.${NC}"
 read -p "Enter the site name (If you wish to install SSL later, please enter a FQDN): " site_name
